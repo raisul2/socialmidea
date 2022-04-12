@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken')
     const {token} = req.cookies
 
     if (!token) {
-          return res.sattus(401).json({
+          return res.status(401).json({
               message:"Please login first"
           })
     }
