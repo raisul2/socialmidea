@@ -1,0 +1,235 @@
+
+
+.main-login{
+
+    height:100vh ;
+    background: linear-gradient(rgb(190, 191, 231),rgb(202, 255, 255),rgb(216, 215, 161));
+    margin: 0;
+   
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+
+
+      .login-subdev{
+          background-color: white;
+          display: flex;
+          justify-content: start;
+          align-items:  center;
+          flex-direction: column;
+          height: 80%;
+          border-radius: 30px;
+          padding: 2em;
+       
+
+          .input-1{
+            border-radius: 50px;
+            padding: 1em;
+          }
+      
+      }
+}
+
+.main-home{
+ height: 100vh;
+  
+  .home-left{
+   background-color: rgb(237, 228, 228);
+   
+    @include  respond-below(sm){
+      padding: 0;
+      margin: 0;
+    }
+    .mySwiper{
+      background-color: rgb(237, 228, 228);
+     width: 45vw;
+     overflow: scroll;
+     overflow-x: hidden;
+     @include respond-below(sm){
+       width: 100%;
+     }
+    }
+  }
+  
+  .home-right{
+
+    overflow-y: scroll;
+    
+    
+  }
+}
+
+
+
+// swiper style here
+
+.swiper {
+
+}
+
+
+
+.swiper-slide {
+  font-size: 18px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+
+/// user style 
+
+
+.home-user{
+  display: flex;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  gap: 25px;
+  
+  &:hover{
+    transform: scale(1.1);
+    transition: all .4s;
+  }
+
+  .user-img{
+    height:60px ;
+    width: 60px;
+      border-radius: 100%;
+      border: 2px  solid black;
+      border-inline-color:  blue;
+    img{
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      object-fit: cover;
+
+    }
+  }
+
+  .user-name{
+     text-transform: capitalize;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-size: 1em;
+     letter-spacing: 6px;
+     color: black;
+     
+  }
+}
+
+
+// post style here
+
+.main-post{
+  background-color: white;
+  border-radius: 10px;
+ 
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // gap: 20px;
+  padding: 1em;
+  .post-header{
+    display: flex;
+     justify-content: end;
+     .menu-btn{
+       border: none;
+       margin-bottom: .2em;
+       i{
+         font-size: 1.2em;
+         margin-top: 0;
+         &:hover{
+           transform: scale(1.2);
+         }
+       }
+     }
+  }
+    .post-img{
+      height:100vh;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+
+      }
+    }
+  
+
+  .post-details{
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       margin-top: .5em;
+       @include respond-below(sm){
+         gap: 0;
+         justify-content: center;
+      }
+       
+       
+       .owner-img{
+         height: 60px;
+         width: 60px;
+         img{
+           height: 100%;
+           width: 100%;
+           object-fit: cover;
+           
+           border-radius: 100%;
+         }
+       }
+     
+       .owner-name{
+         color: black;
+         font-size: .7em;
+         text-transform: capitalize;
+        
+         
+         
+       }
+
+       .caption{
+         font-size: .7em;
+         color: rgb(180, 178, 178);
+         text-transform: capitalize;
+       }
+
+  }
+
+  .post-like{
+    margin-top: .5em;
+    button{
+      color: rgb(193, 188, 188);
+      &:hover{
+        color: black;
+      }
+    }
+  }
+
+  .post-footer{
+    display: flex;
+    gap: 35px;
+    button{
+      border: none;
+      background-color: white;
+        i{
+          font-size: 1.3em;
+          color: black;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+    }
+  }
+}

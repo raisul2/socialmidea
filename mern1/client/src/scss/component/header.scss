@@ -1,0 +1,37 @@
+
+.main-header{
+    display: flex;
+    align-items: center;
+  
+    justify-content:center;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding: 1.3em;
+    border-bottom: 2px solid;
+    
+    @include respond-below(sm){
+        gap: 50px;
+    }
+
+
+
+    a{  
+        
+        
+        i{
+            color: gray;
+            font-size: 1.3em;
+            &:hover{
+              
+                transform: scale(1.5);
+                transition: all ease .3s;
+            }
+            
+        
+        }
+
+        .hover-icon{
+            color: rgb(255, 0, 0);
+        }
+    }
+}
